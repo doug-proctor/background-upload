@@ -25,7 +25,9 @@ class App extends Component {
             onUploadProgress: this.onUploadProgress
         }
 
-        Axios.post('http://localhost:8000/hive', data, config)
+        const url = 'http://localhost:3001' // replace with server that will accept the POST
+
+        Axios.post(url, data, config)
             .then(function (res) {
                 console.log(res)
             })
